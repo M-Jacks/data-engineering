@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <p>Check current weather conditions around the world.</p>
+        </header>
+
+        <form id="weather-form">
+            <input type="text" id="city-input" placeholder="Enter city name..." required>
+            <button type="submit">Search</button>
+        </form>
+
+        <p id="message"></p>
+
+        <section id="weather-card" class="weather-card hidden">
+
+            <div class="location">
+                <h2 id="city-name">Nairobi</h2>
+                <p id="country"></p>
+            </div>
+
+            <div class="temperature">
+                <img id="weather-icon" src="" alt="Weather icon">
+                <h1 id="temperature">--°C</h1>
+                <p id="description"></p>
+                <p id="last-updated"></p>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail">
+                    <h3>Feels Like</h3>
+                    <p id="feels-like">--°C</p>
+                </div>
+
+                <div class="detail">
+                    <h3>Humidity</h3>
+                    <p id="humidity">--%</p>
+                </div>
+
+                <div class="detail">
+                    <h3>Wind Speed</h3>
+                    <p id="wind-speed">-- m/s</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

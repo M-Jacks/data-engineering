@@ -1,0 +1,20 @@
+services:
+
+  backend:
+    build: ./backend
+    container_name: weather-backend
+    expose:
+      - "3000"
+    env_file:
+      - .env
+
+  nginx:
+    image: nginx:alpine
+    container_name: weather-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - backend
